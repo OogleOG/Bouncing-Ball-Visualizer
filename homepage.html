@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Bouncing Ball Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bouncing Ball Visualizer</h1>
+        
+        <canvas id="canvas" width="600" height="600"></canvas>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label>Shape</label>
+                <div class="shape-buttons">
+                    <button class="shape-btn active" data-shape="circle">Circle</button>
+                    <button class="shape-btn" data-shape="square">Square</button>
+                    <button class="shape-btn" data-shape="triangle">Triangle</button>
+                    <button class="shape-btn" data-shape="hexagon">Hexagon</button>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Ball Speed</label>
+                <div class="control-row">
+                    <input type="range" id="speedSlider" min="1" max="10" value="5" step="0.5">
+                    <span class="value-display" id="speedValue">5</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Ball Size</label>
+                <div class="control-row">
+                    <input type="range" id="sizeSlider" min="10" max="50" value="20" step="5">
+                    <span class="value-display" id="sizeValue">20</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Tempo Increase Rate</label>
+                <div class="control-row">
+                    <input type="range" id="tempoSlider" min="1" max="20" value="5" step="1">
+                    <span class="value-display" id="tempoValue">5%</span>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label>Effects</label>
+                <div class="toggle-group">
+                    <button class="toggle-button active" id="trailToggle">Trails</button>
+                    <button class="toggle-button active" id="glowToggle">Glow</button>
+                    <button class="toggle-button active" id="particleToggle">Particles</button>
+                </div>
+            </div>
+
+            <button class="start-button" id="startBtn">Start</button>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-label">Bounces</div>
+                    <div class="stat-value" id="bounceCount">0</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">BPM</div>
+                    <div class="stat-value" id="bpmValue">60</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-label">Speed</div>
+                    <div class="stat-value" id="currentSpeed">5</div>
+                </div>
+            </div>
+            
+            <div class="shortcut-hint">
+                Shortcuts: Space/Click to Start/Stop • R to Reset • 1-4 for Shapes
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
